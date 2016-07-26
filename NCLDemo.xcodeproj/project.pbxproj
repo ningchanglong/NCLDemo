@@ -15,6 +15,7 @@
 		E94DD8BF1D4741AC00464657 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E94DD8BD1D4741AC00464657 /* LaunchScreen.storyboard */; };
 		E94DD8CA1D4741AC00464657 /* NCLDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E94DD8C91D4741AC00464657 /* NCLDemoTests.m */; };
 		E94DD8D51D4741AC00464657 /* NCLDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E94DD8D41D4741AC00464657 /* NCLDemoUITests.m */; };
+		E94DD8E41D4742AF00464657 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E94DD8E31D4742AF00464657 /* UserModel.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		E94DD8D01D4741AC00464657 /* NCLDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NCLDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E94DD8D41D4741AC00464657 /* NCLDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCLDemoUITests.m; sourceTree = "<group>"; };
 		E94DD8D61D4741AC00464657 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E94DD8E21D4742AF00464657 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		E94DD8E31D4742AF00464657 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				E94DD8B31D4741AC00464657 /* AppDelegate.m */,
 				E94DD8B51D4741AC00464657 /* ViewController.h */,
 				E94DD8B61D4741AC00464657 /* ViewController.m */,
+				E94DD8E21D4742AF00464657 /* UserModel.h */,
+				E94DD8E31D4742AF00464657 /* UserModel.m */,
 				E94DD8B81D4741AC00464657 /* Main.storyboard */,
 				E94DD8BB1D4741AC00464657 /* Assets.xcassets */,
 				E94DD8BD1D4741AC00464657 /* LaunchScreen.storyboard */,
@@ -275,6 +280,7 @@
 			files = (
 				E94DD8B71D4741AC00464657 /* ViewController.m in Sources */,
 				E94DD8B41D4741AC00464657 /* AppDelegate.m in Sources */,
+				E94DD8E41D4742AF00464657 /* UserModel.m in Sources */,
 				E94DD8B11D4741AC00464657 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
