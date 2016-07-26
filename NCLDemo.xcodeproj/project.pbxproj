@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F8D5F301E6C352A0A41C642 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D679AC99C4AD02869FD2BA5 /* libPods.a */; };
 		E94DD8B11D4741AC00464657 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E94DD8B01D4741AC00464657 /* main.m */; };
 		E94DD8B41D4741AC00464657 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E94DD8B31D4741AC00464657 /* AppDelegate.m */; };
 		E94DD8B71D4741AC00464657 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E94DD8B61D4741AC00464657 /* ViewController.m */; };
@@ -36,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D679AC99C4AD02869FD2BA5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		559552186604C5533DF9BFE2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		7B1D142FE3376E29064A0FAC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E94DD8AC1D4741AC00464657 /* NCLDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NCLDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E94DD8B01D4741AC00464657 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E94DD8B21D4741AC00464657 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -61,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F8D5F301E6C352A0A41C642 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +86,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00F20F042E4AD0F21C3EDCA7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D679AC99C4AD02869FD2BA5 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		65C1B347159BA8E58678D99E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				559552186604C5533DF9BFE2 /* Pods.debug.xcconfig */,
+				7B1D142FE3376E29064A0FAC /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E94DD8A31D4741AC00464657 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +110,8 @@
 				E94DD8C81D4741AC00464657 /* NCLDemoTests */,
 				E94DD8D31D4741AC00464657 /* NCLDemoUITests */,
 				E94DD8AD1D4741AC00464657 /* Products */,
+				65C1B347159BA8E58678D99E /* Pods */,
+				00F20F042E4AD0F21C3EDCA7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -152,9 +176,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E94DD8D91D4741AC00464657 /* Build configuration list for PBXNativeTarget "NCLDemo" */;
 			buildPhases = (
+				49704086DC4A7B0C09FBB340 /* Check Pods Manifest.lock */,
 				E94DD8A81D4741AC00464657 /* Sources */,
 				E94DD8A91D4741AC00464657 /* Frameworks */,
 				E94DD8AA1D4741AC00464657 /* Resources */,
+				10229188FA4427791202E1ED /* Embed Pods Frameworks */,
+				E7187D62BE5913390FA0A84C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -272,6 +299,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		10229188FA4427791202E1ED /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49704086DC4A7B0C09FBB340 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E7187D62BE5913390FA0A84C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E94DD8A81D4741AC00464657 /* Sources */ = {
@@ -420,6 +495,7 @@
 		};
 		E94DD8DA1D4741AC00464657 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 559552186604C5533DF9BFE2 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = NCLDemo/Info.plist;
@@ -431,6 +507,7 @@
 		};
 		E94DD8DB1D4741AC00464657 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B1D142FE3376E29064A0FAC /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = NCLDemo/Info.plist;
@@ -507,6 +584,7 @@
 				E94DD8DB1D4741AC00464657 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E94DD8DC1D4741AC00464657 /* Build configuration list for PBXNativeTarget "NCLDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +593,7 @@
 				E94DD8DE1D4741AC00464657 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E94DD8DF1D4741AC00464657 /* Build configuration list for PBXNativeTarget "NCLDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +602,7 @@
 				E94DD8E11D4741AC00464657 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
